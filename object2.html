@@ -1,91 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Online Shop</title>
-
-    <style>
-        body {
-            font-family: Arial;
-            background-color: lightgray;
-            text-align: center;
-        }
-
-        .shop {
-            background-color: white;
-            width: 300px;
-            margin: 50px auto;
-            padding: 20px;
-            border: 2px solid black;
-        }
-
-        select, input, button {
-            padding: 8px;
-            margin: 8px;
-        }
-
-        button {
-            background-color: blue;
-            color: white;
-            border: none;
-        }
-
-        #result {
-            margin-top: 20px;
-            font-weight: bold;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-
 <body>
-
-    <div class="shop">
-
-        <h2>Online Shop</h2>
-
-        <p>Tea - 100</p>
-        <p>Coffee - 200</p>
-        <p>Rice - 500</p>
-        <p>Aata - 700</p>
-
-        <label>Select Product:</label>
-
-        <select id="product">
-            <option value="100">Tea</option>
-            <option value="200">Coffee</option>
-            <option value="500">Rice</option>
-            <option value="700">Aata</option>
-        </select>
-
-        <br>
-
-        <label>Quantity:</label>
-
-        <input type="number" id="quantity" value="1">
-
-        <br>
-
-        <button onclick="calculate()">Buy Now</button>
-
-        <p id="result">Your total amount is = 0</p>
-
-    </div>
-
-
+    <p></p>
     <script>
-
-        function calculate() {
-
-            let price = document.getElementById("product").value;
-
-            let quantity = document.getElementById("quantity").value;
-
-            let total = price * quantity;
-
-            document.getElementById("result").innerHTML =
-                "Your total amount is = " + total;
+        let n="ONLINE SHOP";
+        const shop = {
+            Tea : 100,
+            Coffee : 200,
+            Rice : 500,
+            Aata : 700,
         }
-
     </script>
-
 </body>
 </html>
