@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Task Manager (No JS)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        
+        <!-- HIDDEN RADIO BUTTONS FOR FILTERS -->
+        <input type="radio" name="filter" id="filter-all" class="hidden-input" checked>
+        <input type="radio" name="filter" id="filter-pending" class="hidden-input">
+        <input type="radio" name="filter" id="filter-completed" class="hidden-input">
+
+        <h1>Student Task Manager</h1>
+        
+        <!-- Input Section (Visual only without JS or backend) -->
+        <div class="input-section">
+            <input type="text" placeholder="enter your task...">
+            <button class="add-btn">add task</button>
+        </div>
+
+        <!-- Stats Section (Static without JS) -->
+        <div class="stats-section">
+            <div class="stat-box">
+                <span class="stat-title">total task</span>
+                <span class="stat-value">2</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-title">completed task</span>
+                <span class="stat-value">0</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-title">pending task</span>
+                <span class="stat-value">2</span>
+            </div>
+        </div>
+
+        <!-- Filters Section (Using labels linked to hidden radios) -->
+        <div class="filters-section">
+            <label for="filter-all" class="filter-btn">all</label>
+            <label for="filter-pending" class="filter-btn">pending</label>
+            <label for="filter-completed" class="filter-btn">completed</label>
+        </div>
+
+        <!-- Task List -->
+        <ul class="task-list">
+            
+            <!-- TASK 1 -->
+            <li class="task-wrapper">
+                <!-- Hidden checkbox to handle "Deleting" -->
+                <input type="checkbox" id="delete-1" class="hidden-input delete-trigger">
+                
+                <div class="task-item">
+                    <div class="task-left">
+                        <input type="checkbox" class="task-checkbox" id="task-1">
+                        <label class="task-text" for="task-1">SIH PROJECT</label>
+                    </div>
+                    <!-- Delete button linked to hidden delete checkbox -->
+                    <label for="delete-1" class="delete-btn">delete</label>
+                </div>
+            </li>
+
+            <!-- TASK 2 (Added so you can test filters) -->
+            <li class="task-wrapper">
+                <input type="checkbox" id="delete-2" class="hidden-input delete-trigger">
+                
+                <div class="task-item">
+                    <div class="task-left">
+                        <input type="checkbox" class="task-checkbox" id="task-2">
+                        <label class="task-text" for="task-2">Study for Midterms</label>
+                    </div>
+                    <label for="delete-2" class="delete-btn">delete</label>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+</body>
+</html>

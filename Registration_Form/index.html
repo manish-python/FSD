@@ -3,432 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Create Account</title>
+    <title>Student Registration</title>
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
         body {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            padding: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
         }
 
-        .container {
-            width: 450px;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 35px;
-            border-radius: 20px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
-        }
-
-        .logo {
-            width: 60px;
-            height: 60px;
-            margin: auto;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 25px;
-            font-weight: bold;
+        .form-container {
+            width: 400px;
+            margin: 50px auto;
+            padding: 25px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
         }
 
         h2 {
             text-align: center;
-            margin-top: 15px;
-            color: #222;
-        }
-
-        .subtitle {
-            text-align: center;
-            color: #777;
-            margin: 8px 0 25px;
-            font-size: 14px;
-        }
-
-        .input-group {
-            margin-bottom: 18px;
+            color: #333;
         }
 
         label {
             display: block;
-            margin-bottom: 7px;
-            color: #333;
-            font-weight: 600;
-            font-size: 14px;
+            margin-top: 12px;
+            font-weight: bold;
         }
 
         input {
             width: 100%;
-            padding: 13px 15px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            font-size: 14px;
-            transition: 0.3s;
-        }
-
-        input:focus {
-            outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
-        }
-
-        .password-box {
-            position: relative;
-        }
-
-        .password-box input {
-            padding-right: 60px;
-        }
-
-        .show-btn {
-            position: absolute;
-            right: 12px;
-            top: 50%;
-            transform: translateY(-50%);
-            border: none;
-            background: none;
-            color: #667eea;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        .strength {
-            height: 5px;
-            width: 100%;
-            background: #ddd;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
             border-radius: 5px;
-            margin-top: 8px;
-            overflow: hidden;
         }
 
-        .strength-bar {
-            height: 100%;
-            width: 0%;
-            transition: 0.3s;
-        }
-
-        .terms {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin: 20px 0;
-            font-size: 13px;
-            color: #666;
-        }
-
-        .terms input {
-            width: auto;
-        }
-
-        .terms a {
-            color: #667eea;
-            text-decoration: none;
-        }
-
-        .register-btn {
+        button {
             width: 100%;
-            padding: 14px;
-            border: none;
-            border-radius: 10px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .register-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
-        }
-
-        .login {
-            text-align: center;
             margin-top: 20px;
-            color: #777;
-            font-size: 14px;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
         }
 
-        .login a {
-            color: #667eea;
-            font-weight: bold;
-            text-decoration: none;
+        button:hover {
+            background-color: #0056b3;
         }
 
-        #message {
-            text-align: center;
-            margin-top: 15px;
-            font-size: 14px;
-            font-weight: bold;
-        }
-
-        @media (max-width: 500px) {
-            .container {
-                width: 100%;
-                padding: 25px;
-            }
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e8f5e9;
+            color: green;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="container">
+    <div class="form-container">
 
-        <div class="logo">R</div>
+        <h2>Student Registration</h2>
 
-        <h2>Create Account</h2>
+        <form id="studentForm">
 
-        <p class="subtitle">
-            Join us today and create your account
-        </p>
+            <label>Student Name</label>
+            <input type="text" id="name" placeholder="Enter student name">
 
-        <form id="registerForm">
+            <label>Roll Number</label>
+            <input type="text" id="roll" placeholder="Enter roll number">
 
-            <div class="input-group">
-                <label>Full Name</label>
-                <input
-                    type="text"
-                    id="name"
-                    placeholder="Enter your full name"
-                >
-            </div>
+            <label>Email</label>
+            <input type="email" id="email" placeholder="Enter email">
 
-            <div class="input-group">
-                <label>Email Address</label>
-                <input
-                    type="email"
-                    id="email"
-                    placeholder="example@gmail.com"
-                >
-            </div>
+            <label>Maths Marks</label>
+            <input type="number" id="maths" placeholder="Enter marks">
 
-            <div class="input-group">
+            <label>Physics Marks</label>
+            <input type="number" id="physics" placeholder="Enter marks">
 
-                <label>Password</label>
+            <label>Chemistry Marks</label>
+            <input type="number" id="chemistry" placeholder="Enter marks">
 
-                <div class="password-box">
-
-                    <input
-                        type="password"
-                        id="password"
-                        placeholder="Create a strong password"
-                    >
-
-                    <button
-                        type="button"
-                        class="show-btn"
-                        onclick="showPassword()"
-                        id="showBtn">
-                        Show
-                    </button>
-
-                </div>
-
-                <div class="strength">
-                    <div class="strength-bar" id="strengthBar"></div>
-                </div>
-
-            </div>
-
-            <div class="input-group">
-
-                <label>Confirm Password</label>
-
-                <input
-                    type="password"
-                    id="confirmPassword"
-                    placeholder="Confirm your password"
-                >
-
-            </div>
-
-            <div class="terms">
-
-                <input type="checkbox" id="terms">
-
-                <span>
-                    I agree to the
-                    <a href="#">Terms & Conditions</a>
-                </span>
-
-            </div>
-
-            <button class="register-btn" type="submit">
-                Create Account
-            </button>
-
-            <p id="message"></p>
+            <button type="submit">Register Student</button>
 
         </form>
 
-        <div class="login">
-            Already have an account?
-            <a href="#">Login</a>
-        </div>
+        <div id="result"></div>
 
     </div>
 
 
     <script>
 
-        // Show / Hide Password
-        function showPassword() {
-
-            let password = document.getElementById("password");
-            let button = document.getElementById("showBtn");
-
-            if (password.type === "password") {
-
-                password.type = "text";
-                button.innerText = "Hide";
-
-            } else {
-
-                password.type = "password";
-                button.innerText = "Show";
-
-            }
-        }
-
-
-        // Password Strength
-        document.getElementById("password").addEventListener("input", function () {
-
-            let password = this.value;
-            let bar = document.getElementById("strengthBar");
-
-            let strength = 0;
-
-            if (password.length >= 6)
-                strength++;
-
-            if (password.match(/[A-Z]/))
-                strength++;
-
-            if (password.match(/[0-9]/))
-                strength++;
-
-            if (password.match(/[!@#$%^&*]/))
-                strength++;
-
-
-            if (strength === 0) {
-
-                bar.style.width = "0%";
-
-            } else if (strength === 1) {
-
-                bar.style.width = "25%";
-                bar.style.background = "red";
-
-            } else if (strength === 2) {
-
-                bar.style.width = "50%";
-                bar.style.background = "orange";
-
-            } else if (strength === 3) {
-
-                bar.style.width = "75%";
-                bar.style.background = "gold";
-
-            } else {
-
-                bar.style.width = "100%";
-                bar.style.background = "green";
-
-            }
-
-        });
-
-
-        // Form Validation
-        document.getElementById("registerForm").addEventListener("submit", function (event) {
+        document.getElementById("studentForm").addEventListener("submit", function(event) {
 
             event.preventDefault();
 
-            let name = document.getElementById("name").value.trim();
-            let email = document.getElementById("email").value.trim();
-            let password = document.getElementById("password").value;
-            let confirmPassword = document.getElementById("confirmPassword").value;
-            let terms = document.getElementById("terms").checked;
+            let name = document.getElementById("name").value;
+            let roll = document.getElementById("roll").value;
+            let email = document.getElementById("email").value;
 
-            let message = document.getElementById("message");
+            let maths = Number(document.getElementById("maths").value);
+            let physics = Number(document.getElementById("physics").value);
+            let chemistry = Number(document.getElementById("chemistry").value);
 
-
-            if (name === "") {
-
-                message.innerText = "Please enter your name";
-                message.style.color = "red";
+            if (name === "" || roll === "" || email === "") {
+                alert("Please fill all student details");
                 return;
             }
 
+            if (maths < 0 || maths > 100 ||
+                physics < 0 || physics > 100 ||
+                chemistry < 0 || chemistry > 100) {
 
-            if (email === "") {
-
-                message.innerText = "Please enter your email";
-                message.style.color = "red";
+                alert("Marks must be between 0 and 100");
                 return;
-
             }
 
+            let total = maths + physics + chemistry;
+            let percentage = total / 3;
 
-            if (password.length < 6) {
+            let result = document.getElementById("result");
 
-                message.innerText =
-                    "Password must contain at least 6 characters";
-
-                message.style.color = "red";
-                return;
-
-            }
-
-
-            if (password !== confirmPassword) {
-
-                message.innerText =
-                    "Passwords do not match";
-
-                message.style.color = "red";
-                return;
-
-            }
-
-
-            if (!terms) {
-
-                message.innerText =
-                    "Please accept the Terms & Conditions";
-
-                message.style.color = "red";
-                return;
-
-            }
-
-
-            message.innerText =
-                "✓ Account created successfully!";
-
-            message.style.color = "green";
-
-
-            document.getElementById("registerForm").reset();
-
-            document.getElementById("strengthBar").style.width = "0%";
+            result.innerHTML = `
+                <h3>Registration Successful!</h3>
+                <p><b>Name:</b> ${name}</p>
+                <p><b>Roll Number:</b> ${roll}</p>
+                <p><b>Email:</b> ${email}</p>
+                <p><b>Total Marks:</b> ${total}/300</p>
+                <p><b>Percentage:</b> ${percentage.toFixed(2)}%</p>
+            `;
 
         });
 
