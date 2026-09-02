@@ -1,0 +1,238 @@
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+        }
+
+        body {
+            background-color: white ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 600px;
+            min-height: 600px;
+            background-color: #3d84ff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            color: #fdfdfd;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .header img {
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 10px;
+            border: 3px solid #020202;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .header h1 {
+            font-size: 25px;
+            color: #fcfdff;
+            margin-top: 5px;
+        }
+
+        /* User Information */
+        /* .box {
+            border: 2px solid #eff0f1;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 12px;
+        } */
+
+        .box h2 {
+            display: block;
+            width: 100%;
+            font-size: 20px;
+            color: white ;
+            background-color: #1d3557;
+            padding: 10px 0;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .form-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 9px;
+        }
+
+        .form-row label {
+            width: 150px;
+            font-weight: bold;
+        }
+
+        input,
+        select {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #999;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        /* Bus Information */
+        .bus-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .bus-type {
+            flex: 1;
+        }
+
+        .bus-type label {
+            display: block;
+            padding: 7px;
+            cursor: pointer;
+        }
+
+        .bus-type input {
+            margin-right: 8px;
+        }
+
+        .seat {
+            width: 180px;
+        }
+
+        .seat select {
+            width: 100%;
+        }
+
+        /* Buy Button */
+        .button-box {
+            text-align: center;
+            border: 2px solid #1d3557;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .buy-btn {
+            background-color: #1d3557;
+            color: white;
+            border: none;
+            padding: 10px 40px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .buy-btn:hover {
+            background-color: #457b9d;
+        }
+
+                /* TICKET / RECEIPT */
+
+        #ticket {
+            display: none;
+
+            margin-top: 15px;
+
+            border: 2px dashed #1d3557;
+
+            border-radius: 12px;
+
+            background-color: #f8fbff;
+
+            overflow: hidden;
+        }
+
+
+        /* TICKET HEADER */
+
+        .ticket-header {
+            text-align: center;
+
+            background-color: #1d3557;
+
+            color: white;
+
+            padding: 15px;
+        }
+
+        .ticket-header h2 {
+            margin-bottom: 5px;
+
+            font-size: 21px;
+        }
+
+        .ticket-header p {
+            font-size: 14px;
+
+            color: #dbeafe;
+        }
+
+
+        /* TICKET DETAILS */
+
+        .ticket-details {
+            padding: 15px;
+        }
+
+        .ticket-row {
+            display: flex;
+
+            justify-content: space-between;
+
+            padding: 8px 0;
+
+            border-bottom: 1px solid #ddd;
+        }
+
+        .ticket-row strong {
+            color: #1d3557;
+        }
+
+        .ticket-row span {
+            font-weight: bold;
+
+            color: #333;
+        }
+
+
+        /* PRICE */
+
+        .ticket-row.price {
+            font-size: 18px;
+
+            border-bottom: none;
+
+            margin-top: 5px;
+        }
+
+        .ticket-row.price span {
+            color: #16826f;
+        }
+
+
+        /* TICKET FOOTER */
+
+        .ticket-footer {
+            text-align: center;
+
+            background-color: #e8f0fe;
+
+            padding: 10px;
+
+            color: #1d3557;
+
+            font-weight: bold;
+        }
