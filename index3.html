@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>CodeCampus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #111;
+        }
+
+        nav {
+            background: #124691;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 8%;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 60px 8%;
+            border-bottom: 2px solid #222;
+        }
+
+        .hero-text {
+            width: 52%;
+        }
+
+        .hero h1 {
+            color: #164582;
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 17px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            background: #124691;
+            color: white;
+            padding: 12px 24px;
+            border: 0;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .hero img {
+            width: 38%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .about {
+            background: #eef5ff;
+            text-align: center;
+            padding: 55px 10%;
+            border-bottom: 2px solid #222;
+        }
+
+        h2 {
+            color: #164582;
+            font-size: 34px;
+            margin-bottom: 30px;
+        }
+
+        .about p {
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        .courses {
+            padding: 30px 10% 55px;
+            text-align: center;
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: #f8f9fc;
+            padding: 25px 15px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px #ddd;
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            line-height: 1.4;
+        }
+
+        .register {
+            margin-top: 55px;
+        }
+
+        .mentors {
+            background: #f0faf3;
+            padding: 35px 10% 45px;
+            text-align: center;
+        }
+
+        .mentor-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .mentor {
+            background: white;
+            padding: 18px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px #ccc;
+        }
+
+        .mentor img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #164582;
+            margin-bottom: 10px;
+        }
+
+        .mentor h3 {
+            font-size: 15px;
+        }
+
+        .mentor p {
+            font-size: 13px;
+        }
+
+        footer {
+            background: #124691;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            line-height: 1.7;
+        }
+
+        @media(max-width:900px) {
+            nav {
+                padding: 15px 5%;
+            }
+
+            .hero {
+                padding: 40px 5%;
+            }
+
+            .course-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .mentor-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width:600px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+            }
+
+            .hero-text {
+                width: 100%;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero img {
+                width: 100%;
+                height: 220px;
+            }
+
+            .course-grid,
+            .mentor-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">CodeCampus</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#mentors">Our Mentors</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Learn Computer Science<br>The Smart Way</h1>
+            <p>Welcome to CodeCampus, your one-stop learning platform specially designed for B.Tech Computer Science
+                students. Learn coding, development, interview preparation, projects, and placement skills from
+                experienced mentors.</p>
+            <a href="#courses" class="btn">Explore Courses</a>
+        </div>
+        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=900&q=80"
+            alt="Students learning">
+    </section>
+
+    <section class="about" id="about">
+        <h2>About Us</h2>
+        <p>CodeCampus is an online tutorial platform built especially for B.Tech Computer Science Engineering students.
+            We provide complete tutorials, notes, coding practice, placement preparation, aptitude training, interview
+            guidance, project assistance, and career mentorship. Our mission is to make quality technical education
+            accessible to every engineering student.</p>
+    </section>
+    <section class="courses" id="courses">
+        <h2>Our Courses</h2>
+        <div class="course-grid">
+            <div class="card">
+                <h3>C Programming</h3>
+                <p>Master programming from basic to advanced.</p>
+            </div>
+            <div class="card">
+                <h3>C++ Programming</h3>
+                <p>Object Oriented Programming and STL.</p>
+            </div>
+            <div class="card">
+                <h3>Python Programming</h3>
+                <p>Python for coding, AI and automation.</p>
+            </div>
+            <div class="card">
+                <h3>Java Programming</h3>
+                <p>Java programming with real-world examples.</p>
+            </div>
+            <div class="card">
+                <h3>Data Structures</h3>
+                <p>Arrays, Trees, Graphs, Linked Lists and more.</p>
+            </div>
+            <div class="card">
+                <h3>DBMS</h3>
+                <p>SQL, ER Models, Transactions and Queries.</p>
+            </div>
+            <div class="card">
+                <h3>Operating System</h3>
+                <p>Scheduling, Deadlocks and Memory Management.</p>
+            </div>
+            <div class="card">
+                <h3>Web Development</h3>
+                <p>HTML, CSS, JavaScript and Responsive Design.</p>
+            </div>
+        </div>
+        <div class="register">
+            <a href="#" class="btn">Register Now</a>
+        </div>
+    </section>
+    <section class="mentors" id="mentors">
+        <h2>Our Mentors</h2>
+        <div class="mentor-grid">
+            <div class="mentor">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Mentor">
+                <h3>Dr. Rahul Sharma</h3>
+                <p>Artificial Intelligence Expert</p>
+            </div>
+            <div class="mentor">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Mentor">
+                <h3>Prof. Neha Verma</h3>
+                <p>Full Stack Developer</p>
+            </div>
+            <div class="mentor">
+                <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Mentor">
+                <h3>Er. Amit Singh</h3>
+                <p>Placement Trainer</p>
+            </div>
+            <div class="mentor">
+                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Mentor">
+                <h3>Dr. Priya Gupta</h3>
+                <p>Data Science Mentor</p>
+            </div>
+        </div>
+    </section>
+    <footer id="contact">
+        <b>CodeCampus</b>
+        <br>
+        Email : support@codecampus.com
+        <br>
+        Phone : +91 9876543210
+        <br>
+        © 2026 CodeCampus. All Rights Reserved.
+    </footer>
+</body>
+</html>
