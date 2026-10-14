@@ -40,6 +40,7 @@ const App = () => {
         <link to="/about">About</link>  {" "}
         <link to="/phone">Phone</link>  {" "}
       </nav>
+      
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/about" element={<About/>} />
