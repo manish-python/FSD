@@ -6,7 +6,6 @@ function myfunction() {
     box.current = 1000;
     console.log("update: ", box.current);
   };
-
   return(
     <div>
       <button onClick={update}>Update</button>
